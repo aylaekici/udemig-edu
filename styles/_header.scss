@@ -1,0 +1,102 @@
+@import "./mixin";
+header {
+     background: rgba(255, 255, 255, 0.24);
+  border-radius: 0 0 16px 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10.3px);
+  -webkit-backdrop-filter: blur(10.3px);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  @extend .flexBox;
+  padding: 27px 17px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+
+  //    logo
+  .logo {
+    font-size: 33px;
+    font-weight: 700;
+    white-space: nowrap;
+    // span
+    span {
+      color: $main-color;
+    }
+    @include laptop {
+      font-size: 25px;
+    }
+  }
+
+  // navigation
+  nav {
+    @extend .flexBox;
+    @include laptop {
+      display: none !important;
+    }
+
+    a {
+      margin: 15px 22px;
+      font-size: $p-font;
+      font-weight: 500;
+      text-transform: uppercase;
+      display: block;
+      @extend .transition;
+
+      &:hover {
+        scale: 1.2;
+        color: $main-color;
+      }
+    }
+  }
+  // right area
+  .right-area {
+    @extend .flexBox;
+    .social-links {
+      @include mini-tablet {
+        display: none !important;
+      }
+    }
+
+    a {
+      margin: 5px 18px;
+      cursor: pointer;
+      @extend .transition;
+
+      &:hover {
+        color: $main-color;
+        transform: translateY(-3px);
+      }
+      &:first-child {
+        font-size: $p-font;
+      }
+    }
+
+    #menu-btn {
+      display: none;
+      @include laptop {
+        display: block !important;
+      }
+    }
+  }
+}
+// responsive navigation
+nav.active {
+  position: fixed;
+  right: 10px;
+  top: 100px;
+  display: flex !important;
+  flex-direction: column;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.24);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10.3px);
+  -webkit-backdrop-filter: blur(10.3px);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  a {
+    font-size: 0.8rem;
+    &:hover {
+      scale: 0.9;
+    }
+  }
+}
