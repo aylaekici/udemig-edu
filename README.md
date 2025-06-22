@@ -37,5 +37,7 @@ This website serves as a promotional landing page for an educational service pro
 
 ---
 
-## 📂 Folder Structure
+#Contact me here ![image](https://github.com/user-attachments/assets/88bf43fe-f510-4bb9-aa1d-4b8cf8db5264)
+ekcayla@gmail.com
+
 
